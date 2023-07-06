@@ -33,10 +33,12 @@ function playGame(playerSelection, computerSelection){
         console.log("You Win!")
         player_score+=1
     } 
+
     else if ( playerSelection===computerSelection){
         console.log("Draw/Tie Game!")
         comp_score, player_score += 0
     }
+    
     else{
         console.log("Computer Wins!")
         comp_score +=1
