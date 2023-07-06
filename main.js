@@ -10,7 +10,7 @@ function getComputerChoice(){
         comp_selec='paper'
         return comp_selec
     }
-    else if (comp_selec===2) {
+    else{
         comp_selec='scissors'
         return comp_selec
     }
@@ -18,7 +18,6 @@ function getComputerChoice(){
 
 
 // PLAYER CHOICE
-
 
 function getPlayerChoice(){
     let player_selec=prompt("Enter Your Choice : (rock, paper, scissors)")
@@ -30,34 +29,17 @@ function getPlayerChoice(){
 
 function playGame(playerSelection, computerSelection){
 
-    if (playerSelection=='rock' && computerSelection=='scissors'){
-        console.log("You Win! (Rock Beats Scissors!)")
+    if (playerSelection=='rock' && computerSelection=='scissors' || playerSelection=='paper' && computerSelection=='rock' || playerSelection=='scissors' && computerSelection=='paper'){
+        console.log("You Win!")
         player_score+=1
     } 
-    else if (playerSelection=='rock' && computerSelection=='paper'){
-        console.log('Computer Wins! (Paper Beats Rock!)')
-        comp_score+=1
-
-    }
-    else if (playerSelection=='scissors' && computerSelection=='rock'){
-        console.log("Computer Wins! (Rock Beats Scissors)")
-        comp_score+=1
-    }
-    else if (playerSelection='scissors' && computerSelection=='paper'){
-        console.log('You Win! (Scissors Beats Paper!)')
-        player_score+=1
-    }
-    else if (playerSelection='paper' && computerSelection=='rock'){
-        console.log("You Win! (Paper Beats Rock!)")
-        player_score+=1
-    }
-    else if (playerSelection=='paper' && computerSelection=='scissors'){
-        console.log("Computer Wins! (Scissors Beat Paper)")
-        comp_score+=1
-    }
-    else{
+    else if ( playerSelection===computerSelection){
         console.log("Draw/Tie Game!")
         comp_score, player_score += 0
+    }
+    else{
+        console.log("Computer Wins!")
+        comp_score +=1
     }     
 }
 
@@ -112,9 +94,9 @@ function finalScores(){
     console.log(`Player Score : ${player_score}`)
     console.log(`Computer Score : ${comp_score}`)
     if (player_score>comp_score){
-        console.log("Player Wins!")
+        console.log("Player Wins The Entire Game!")
     }else{
-        console.log("Computer Wins!")
+        console.log("Computer Wins The Entire Game!")
     }
 }
 
