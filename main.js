@@ -97,8 +97,12 @@ function finalScores(){
     console.log(`Computer Score : ${comp_score}`)
     if (player_score>comp_score){
         console.log("Player Wins The Entire Game!")
-    }else{
+    }
+    else if(comp_score>player_score){
         console.log("Computer Wins The Entire Game!")
+    }
+    else{
+        console.log("Tie Game!")
     }
 }
 
