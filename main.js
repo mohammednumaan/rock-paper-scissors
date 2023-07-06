@@ -2,13 +2,15 @@
 
 function getComputerChoice(){
     let comp_selec=Math.floor(Math.random() * 3);                   //0==rock, 1==paper, 2==scissors
-    if (comp_selec==0){
+    if (comp_selec===0){
         comp_selec='rock'
         return comp_selec
-    } else if (comp_selec==1){
+    }
+    else if (comp_selec===1){
         comp_selec='paper'
         return comp_selec
-    }else {
+    }
+    else if (comp_selec===2) {
         comp_selec='scissors'
         return comp_selec
     }
@@ -55,6 +57,7 @@ function playGame(playerSelection, computerSelection){
     }
     else{
         console.log("Draw/Tie Game!")
+        comp_score, player_score += 0
     }     
 }
 
@@ -89,7 +92,7 @@ function round(){
     finalScores()
 }
 
-// BOTH CHOICES
+// GET BOTH CHOICES
 
 function getChoices(){
     computerSelection = getComputerChoice();
