@@ -49,8 +49,8 @@ function playGame(playerSelection, computerSelection){
 
 function round(){
     for(i=1;i<=5;i++){
-        console.log(`Round : ${i}`)
         getChoices()
+        console.log(`Round : ${i}`)
         displayChoices()
         playGame(playerSelection,computerSelection);
         (i === 5) ? finalScores() : ""
