@@ -48,32 +48,13 @@ function playGame(playerSelection, computerSelection){
 // ROUND-COUNT LOGIC
 
 function round(){
-
-    console.log("Round : 1")
-    displayChoices()
-    playGame(playerSelection,computerSelection)                         // round 1
-    
-    console.log("Round : 2")                                           // round 2
-    getChoices()
-    displayChoices()
-    playGame(playerSelection,computerSelection)
-
-    console.log("Round : 3")                                           // round 3
-    getChoices()
-    displayChoices()
-    playGame(playerSelection,computerSelection)
-
-    console.log("Round : 4")                                          // round 4
-    getChoices()
-    displayChoices()
-    playGame(playerSelection,computerSelection)
-
-    console.log("Round : 5")                                         // round 5
-    getChoices()
-    displayChoices()
-    playGame(playerSelection,computerSelection)
-
-    finalScores()
+    for(i=1;i<=5;i++){
+        console.log(`Round : ${i}`)
+        getChoices()
+        displayChoices()
+        playGame(playerSelection,computerSelection);
+        (i === 5) ? finalScores() : ""
+    }
 }
 
 // GET BOTH CHOICES
